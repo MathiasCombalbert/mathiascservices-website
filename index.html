@@ -7,6 +7,7 @@
     <title>Mathias C Services</title>
     <meta name="description" content="">
     <meta name="keywords" content="">
+    <script src="https://cdn.tailwindcss.com"></script>
 
     <!-- Favicons -->
 
@@ -22,6 +23,7 @@
     <link href="assets/css/header.css" rel="stylesheet">
     <link href="assets/css/home.css" rel="stylesheet">
     <link href="assets/css/footer.css" rel="stylesheet">
+    <link href="assets/css/hero.css" rel="stylesheet">
 
 </head>
 
@@ -36,8 +38,7 @@
             <!--Nav Logo-->
             <!--Logo is turned white in the css with a filter on dark mode-->
             <a href="index.html" class="cs-logo" aria-label="back to home">
-                <img src="assets/img/Design_sans_titre__1_-removebg-preview.png" alt="logo" width="210" height="36"
-                    aria-hidden="true" decoding="async">
+                <img src="" alt="logo" width="210" height="36" aria-hidden="true" decoding="async">
             </a>
             <!--Navigation List-->
             <nav class="cs-nav" role="navigation">
@@ -96,23 +97,36 @@
         <section id="hero" class="hero section dark-background">
             <img src="assets/img/hero-bg-2.jpg" alt="Hero Background" class="hero-bg">
 
-            <div class="container">
-                <div class="row gy-4 justify-content-between">
+            <div class="hero-content">
+                <h1>Small Business <span class="text-blue-600"><br/>Web Designer</span></h1>
+                <p>No page builders or WordPress. We offer 100% hand-coded websites with superior results.</p>
+                <button class="btn-get-started">Get Started</button>
+            </div>
+            <div class="hero-image animated">
+                <img src="assets/img/laptop.png" alt="Hero Illustration">
+            </div>
 
-                    <div class="col-lg-6  d-flex flex-column justify-content-center" data-aos="fade-in">
-                        <h1>Small Business <span>Web Designer</span></h1>
+            
+            <!-- <div class="container mx-auto flex flex-col md:flex-row items-center min-h-[70vh] px-6 md:px-12">
+                <div class="row ">
+                    <div class="flex-1 flex flex-col justify-center items-start space-y-4 md:pr-20" data-aos="fade-in">
+                        <h1 class="text-4xl md:text-5xl font-bold text-gray-800 leading-snug">
+                            Small Business <span class="text-blue-600">Web Designer</span></h1>
                         <p>No page builders or WordPress. We offer 100% hand-coded websites with superior results.</p>
                         <div class="d-flex">
                             <a href="#about" class="btn-get-started">Get Started</a>
                         </div>
                     </div>
-
-                    <div class="hero-img" data-aos="zoom-out" data-aos-delay="100">
-                        <img src="assets/img/laptop.png" class="img-fluid animated" alt="">
+                    <div class="md:w-1/2 flex justify-center">
+                        <div class="relative animated">
+                            <div class="absolute -inset-8 bg-indigo-100 rounded-3xl opacity-75"></div>
+                            <img src="assets/img/laptop.png" alt="Hero Image"
+                                class="relative rounded-2xl max-w-full h-auto md:max-w-2xl lg:max-w-3xl">
+                        </div>
                     </div>
 
                 </div>
-            </div>
+            </div> -->
 
             <svg class="hero-waves" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"
                 viewBox="0 24 150 28 " preserveAspectRatio="none">
@@ -163,7 +177,8 @@
                             </picture>
                             <h3 class="cs-h3">Fully Responsive</h3>
                             <p class="cs-item-text">
-                                Your website must work on any device. We ensure it looks great and performs well on desktops, tablets, and phones, making your site shine for all visitors.
+                                Your website must work on any device. We ensure it looks great and performs well on
+                                desktops, tablets, and phones, making your site shine for all visitors.
                             </p>
                         </a>
                     </li>
