@@ -1,0 +1,759 @@
+/*--------------------------------------------------------------
+# Hero Section
+--------------------------------------------------------------*/
+
+
+#hero {
+  width: 100%;
+  min-height: 90vh;
+  position: relative;
+  padding: 120px 0 120px 0;
+  display: flex;
+  align-items: center;
+  margin-bottom: 100px;
+}
+
+#hero .hero-bg {
+  position: absolute;
+  inset: 0;
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  z-index: 1;
+}
+
+
+#hero .hero-img {
+  position: relative;
+  right: 0;
+  z-index: 2;
+  height: auto;
+  max-width: 50%;
+  margin-left: auto;
+} 
+
+#hero .hero-img img {
+  max-width: 100%;
+  height: auto;
+}
+
+#hero .row {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+}
+
+
+#hero .col-lg-6 {
+  max-width: 100vh;
+  width: 500px;
+  margin-left: auto;
+  text-align: left;
+  padding-right: 120px;
+} 
+
+#hero:before {
+  content: "";
+  background: color-mix(in srgb, var(--background-color), transparent 10%);
+  position: absolute;
+  inset: 0;
+  z-index: 2;
+}
+
+#hero .container {
+  position: relative;
+  z-index: 3;
+}
+* {
+  box-sizing: border-box;
+}
+
+#hero h1 {
+  margin: 0 0 20px 0;
+  font-size: 48px;
+  font-weight: 700;
+  line-height: 56px;
+  color: color-mix(in srgb, var(--heading-color), transparent 30%);
+}
+
+#hero h1 span {
+  color: var(--heading-color);
+  border-bottom: 4px solid var(--accent-color);
+}
+
+#hero p {
+  color: color-mix(in srgb, var(--default-color), transparent 30%);
+  margin: 5px 0 30px 0;
+  font-size: 22px;
+  font-weight: 400;
+}
+
+#hero .btn-get-started {
+  z-index: 1;
+  position: relative;
+  display: inline-block;
+  border-radius: 3.75rem;
+  margin: 0;
+  background-color: var(--accent-color);
+  background-image: linear-gradient(white, white);
+  background-repeat: no-repeat;
+  background-position: 100% 50%;
+  background-size: 0% 100%;
+  min-width: 11.25rem;
+  box-sizing: border-box;
+  padding: 0 3rem;
+  text-decoration: none;
+  text-transform: uppercase;
+  font-family: var(--headerFont);
+  font-size: 1rem;
+  line-height: clamp(2.875rem, 5.5vw, 3.5rem);
+  font-weight: 700;
+  color: black;
+  transition: background-size .5s, color .5s;
+  text-align: center;
+  white-space: nowrap;
+}
+
+#hero .btn-get-started:hover {
+  color: black;
+  background-size: 100% 100%;
+}
+
+
+#hero .animated {
+  animation: up-down 2s ease-in-out infinite alternate-reverse both;
+}
+
+@media (max-width: 1023px) {
+  #hero .row {
+    flex-direction: column;
+    /* Stack text and image vertically */
+    align-items: center;
+    /* Center-align everything */
+    justify-content: center;
+    text-align: center;
+    /* Center text alignment */
+  }
+
+  #hero .container {
+    width: 100%;
+  }
+
+  #hero .col-lg-6 {
+    max-width: 90%;
+    /* Adjust the width to fit smaller screens */
+    margin: 0 auto;
+    /* Center the text block */
+    padding-right: 0;
+    /* Remove right padding */
+    text-align: center;
+    /* Center-align text */
+  }
+
+  #hero h1 {
+    font-size: 32px;
+    /* Adjust font size for smaller screens */
+    line-height: 40px;
+  }
+
+  #hero p {
+    font-size: 16px;
+    /* Adjust paragraph font size */
+    line-height: 22px;
+    margin: 10px 0 20px 0;
+  }
+
+  #hero .hero-img {
+    margin: 20px auto 0 auto;
+    /* Add spacing above the image */
+    width: 90%;
+    /* Adjust image width for mobile */
+    right: 0;
+    /* Reset alignment */
+  }
+
+  #hero .hero-img img {
+    width: 90%;
+    /* Ensure the image scales properly */
+    height: auto;
+    /* Maintain aspect ratio */
+  }
+
+  #hero .btn-get-started {
+    min-width: 9rem;
+    /* Adjust button size for mobile */
+    padding: 10px 20px;
+    font-size: 0.9rem;
+    line-height: 2rem;
+  }
+}
+
+@media (max-width: 480px) {
+  #hero h1 {
+    font-size: 24px;
+    /* Smaller font size for very small screens */
+    line-height: 32px;
+  }
+
+  #hero p {
+    font-size: 14px;
+    /* Smaller paragraph text */
+    line-height: 20px;
+  }
+
+  #hero .hero-img {
+    width: 90%;
+    /* Further reduce the image width */
+    max-width: 100%;
+  }
+}
+
+
+#hero .hero-waves {
+  display: block;
+  width: 100%;
+  height: 50px;
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  z-index: 3;
+}
+
+#hero .wave1 use {
+  animation: move-forever1 10s linear infinite;
+  animation-delay: -2s;
+  fill: var(--default-color);
+  opacity: 0.6;
+}
+
+#hero .wave2 use {
+  animation: move-forever2 8s linear infinite;
+  animation-delay: -2s;
+  fill: var(--default-color);
+  opacity: 0.4;
+}
+
+#hero .wave3 use {
+  animation: move-forever3 6s linear infinite;
+  animation-delay: -2s;
+  fill: var(--default-color);
+}
+
+@keyframes move-forever1 {
+  0% {
+    transform: translate(85px, 0%);
+  }
+
+  100% {
+    transform: translate(-90px, 0%);
+  }
+}
+
+@keyframes move-forever2 {
+  0% {
+    transform: translate(-90px, 0%);
+  }
+
+  100% {
+    transform: translate(85px, 0%);
+  }
+}
+
+@keyframes move-forever3 {
+  0% {
+    transform: translate(-90px, 0%);
+  }
+
+  100% {
+    transform: translate(85px, 0%);
+  }
+}
+
+@keyframes up-down {
+  0% {
+    transform: translateY(10px);
+  }
+
+  100% {
+    transform: translateY(-10px);
+  }
+}
+
+/*-- -------------------------- -->
+<---          Services          -->
+<--- -------------------------- -*/
+
+/* Mobile - 360px */
+@media only screen and (min-width: 0rem) {
+  #services-690 {
+    padding: var(--sectionPadding);
+  }
+
+  #services-690 .cs-container {
+    width: 100%;
+    /* changes to 1280px at tablet */
+    max-width: 34.375rem;
+    margin: auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    /* 48px - 64px */
+    gap: clamp(3rem, 6vw, 4rem);
+  }
+
+  #services-690 .cs-content {
+    /* set text align to left if content needs to be left aligned */
+    text-align: left;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    /* centers content horizontally, set to flex-start to left align */
+    align-items: flex-start;
+  }
+
+  #services-690 .cs-flex-group {
+    /* prevents flexbox from squishing it */
+    flex: none;
+  }
+
+  #services-690 .cs-color {
+    color: var(--primary);
+  }
+
+  #services-690 .cs-card-group {
+    width: 100%;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    flex-direction: column;
+    row-gap: 1rem;
+  }
+
+  #services-690 .cs-item {
+    list-style: none;
+    width: 100%;
+    /* 24px - 40px top & bottom */
+    padding: clamp(1.25rem, 4vw, 2.5rem) 1.5rem;
+    background-color: #f7f8f8;
+    box-sizing: border-box;
+    transition:
+      background-color 0.3s,
+      transform 0.3s,
+      box-shadow 0.3s;
+  }
+
+  #services-690 .cs-item:hover {
+    background-color: #fff;
+    box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 50px;
+    transform: translateY(-0.4375rem);
+  }
+
+  #services-690 .cs-item:hover .cs-picture:before {
+    width: 100%;
+    height: 100%;
+    opacity: 1;
+  }
+
+  #services-690 .cs-link {
+    text-decoration: none;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+  }
+
+  #services-690 .cs-picture {
+    width: 4rem;
+    height: 4rem;
+    margin: 0;
+    margin-bottom: 1.5rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 50%;
+    background-color: #fff;
+    box-shadow: 0px 12px 30px rgba(26, 26, 26, 0.04);
+    position: relative;
+    z-index: 1;
+  }
+
+  #services-690 .cs-icon {
+    height: 2rem;
+    width: auto;
+  }
+
+  #services-690 .cs-h3 {
+    font-size: 1.25rem;
+    font-weight: 900;
+    text-align: center;
+    line-height: 1.2em;
+    margin: 0;
+    margin-bottom: 0.75rem;
+    color: var(--heading-color);
+    transition: color 0.3s;
+  }
+
+  #services-690 .cs-item-text {
+    /* 14px - 16px */
+    font-size: clamp(0.875rem, 1.5vw, 1rem);
+    text-align: center;
+    line-height: 1.5em;
+    margin: 0;
+    color: #1a1a1a;
+    transition: color 0.3s;
+  }
+
+  #services-690 .service-button {
+    z-index: 1;
+    position: relative;
+    display: inline-block;
+    border-radius: 3.75rem;
+    margin: 0;
+    background-color: var(--accent-color);
+    background-image: linear-gradient(white, white);
+    background-repeat: no-repeat;
+    background-position: 100% 50%;
+    background-size: 0% 100%;
+    min-width: 11.25rem;
+    box-sizing: border-box;
+    padding: 0 3rem;
+    text-decoration: none;
+    text-transform: uppercase;
+    font-family: var(--headerFont);
+    font-size: 1rem;
+    line-height: clamp(2.875rem, 5.5vw, 3.5rem);
+    font-weight: 700;
+    color: black;
+    transition: background-size .5s, color .5s;
+    text-align: center;
+    white-space: nowrap;
+  }
+}
+
+/* Tablet - 768px */
+@media only screen and (min-width: 48rem) {
+  #services-690 .cs-container {
+    max-width: 80rem;
+  }
+
+  #services-690 .cs-content {
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    gap: 3rem;
+  }
+
+  #services-690 .cs-flex-group {
+    width: 50%;
+  }
+
+  #services-690 .service-button {
+    z-index: 1;
+    position: relative;
+    display: inline-block;
+    border-radius: 3.75rem;
+    margin: 0;
+    background-color: var(--accent-color);
+    background-image: linear-gradient(white, white);
+    background-repeat: no-repeat;
+    background-position: 100% 50%;
+    background-size: 0% 100%;
+    min-width: 11.25rem;
+    box-sizing: border-box;
+    padding: 0 3rem;
+    text-decoration: none;
+    text-transform: uppercase;
+    font-family: var(--headerFont);
+    font-size: 1rem;
+    line-height: clamp(2.875rem, 5.5vw, 3.5rem);
+    font-weight: 700;
+    color: black;
+    transition: background-size .5s, color .5s;
+    text-align: center;
+    white-space: nowrap;
+  }
+
+  #services-690 .cs-card-group {
+    /* pushes down the same amount the 2nd cards are translated down to maintain the even spacing at the bottom of the cs-card-group */
+    margin-bottom: 2.5rem;
+    flex-direction: row;
+    justify-content: center;
+    flex-wrap: wrap;
+    column-gap: 1.25rem;
+  }
+
+  #services-690 .cs-item {
+    width: 30vw;
+    max-width: 25.8125rem;
+  }
+
+  #services-690 .cs-item:nth-of-type(2) {
+    transform: translateY(2.5rem);
+  }
+
+  #services-690 .cs-item:nth-of-type(2):hover {
+    /* make these cards a separate hover translate amount, they're already translated 40px down, so to match the same hover animations as the other cards we just subtract their translate values from the 40px and they will move up by the same amount as the other cards */
+    transform: translateY(2.0625rem);
+  }
+}
+
+
+/* Service button styling */
+#services-690 .service-button {
+  z-index: 1;
+  position: relative;
+  display: inline-block;
+  border-radius: 3.75rem;
+  margin: 0;
+  background-color: color-mix(in srgb, #08005e, transparent 10%);
+  background-image: linear-gradient(var(--accent-color), var(--accent-color));
+  background-repeat: no-repeat;
+  background-position: 100% 50%;
+  background-size: 0% 100%;
+  min-width: 11.25rem;
+  box-sizing: border-box;
+  padding: 0 3rem;
+  text-decoration: none;
+  text-transform: uppercase;
+  font-family: var(--headerFont);
+  font-size: 1rem;
+  line-height: clamp(2.875rem, 5.5vw, 3.5rem);
+  font-weight: 700;
+  color: #fff;
+  transition: background-size .5s, color .5s;
+  text-align: center;
+  white-space: nowrap;
+}
+
+#services-690 .service-button:hover {
+  color: black;
+  background-size: 100% 100%;
+}
+
+/* Ensure container layout supports centering */
+#services-690 .cs-container {
+  display: flex;
+  flex-direction: column;
+  /* Stack items vertically */
+  align-items: center;
+  /* Center items horizontally */
+}
+
+/*-- -------------------------- -->
+<---          Gallery           -->
+<--- -------------------------- -*/
+
+/* Mobile - 360px */
+@media only screen and (min-width: 0rem) {
+  #gallery-43 {
+    padding: var(--sectionPadding);
+    position: relative;
+    /* Prevents overflow from the image going off screen */
+    overflow: hidden;
+  }
+
+  #gallery-43 .cs-container {
+    width: 100%;
+    max-width: 69rem;
+    margin: auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    /* 48px - 64px */
+    gap: clamp(3rem, 6vw, 4rem);
+  }
+
+  #gallery-43 .cs-content {
+    /* set text align to left if content needs to be left aligned */
+    text-align: center;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    /* centers content horizontally, set to flex-start to left align */
+    align-items: center;
+  }
+
+  #gallery-43 .cs-image-group {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    /* 16px - 20px */
+    gap: clamp(1rem, 1.5vw, 1.25rem);
+  }
+
+  #gallery-43 .cs-item {
+    width: 100%;
+    height: 100%;
+    aspect-ratio: 1;
+    margin: 0;
+    position: relative;
+    display: block;
+  }
+
+  #gallery-43 .cs-item:hover .cs-hover-box {
+    opacity: 1;
+  }
+
+  #gallery-43 .cs-item:hover .cs-icon {
+    /* return to original position */
+    transform: rotateY(0);
+  }
+
+  #gallery-43 .cs-item:hover .cs-h3 {
+    opacity: 1;
+    /* Return to original position */
+    transform: translateY(0);
+  }
+
+  #gallery-43 .cs-item:hover .cs-hover-box-text {
+    opacity: 1;
+    /* Return to original position */
+    transform: translateY(0);
+  }
+
+  #gallery-43 .cs-picture {
+    margin: auto;
+    width: 100%;
+    height: 100%;
+    display: block;
+    position: relative;
+  }
+
+  #gallery-43 .cs-picture img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+  }
+
+  #gallery-43 .cs-hover-box {
+    text-align: center;
+    width: 100%;
+    height: 100%;
+    padding: 1em;
+    background-color: rgba(229, 87, 44, 0.9);
+    opacity: 0;
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    /* Prevents padding from contributing to height & width */
+    box-sizing: border-box;
+    /* Sets stage for 3d transform animation */
+    perspective: 700px;
+    top: 0;
+    left: 0;
+    z-index: 10;
+    /* prevents mouse from being able to interact with these elements */
+    pointer-events: none;
+    transition: opacity 0.3s;
+  }
+
+  #gallery-43 .cs-icon {
+    /* 50px - 60px */
+    width: clamp(3.125rem, 5vw, 3.75rem);
+    height: clamp(3.125rem, 5vw, 3.75rem);
+    /* 16px - 32px */
+    margin-bottom: clamp(1rem, 5vw, 2rem);
+    border-radius: 50%;
+    background-color: #fff;
+    outline: 0.5rem solid rgba(255, 255, 255, 0.7);
+    /* Start with the icon box rotated 90deg */
+    transform: rotateY(90deg);
+    position: relative;
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    flex: none;
+    transition: transform 0.5s;
+  }
+
+  #gallery-43 .cs-icon img {
+    width: 1.25rem;
+    height: 1.25rem;
+  }
+
+  #gallery-43 .cs-h3 {
+    /* 20px - 25px */
+    font-size: clamp(1.25rem, 2vw, 1.5625rem);
+    line-height: 1.2em;
+    font-weight: 700;
+    margin: 0 auto;
+    max-width: 16.875rem;
+    color: #fff;
+    /* make starting position down 10px and invisible */
+    opacity: 0;
+    transform: translateY(0.625rem);
+    margin-bottom: 0.5rem;
+    transition:
+      opacity 0.3s,
+      transform 0.3s ease-out;
+    transition-delay: 0.1s;
+  }
+
+  #gallery-43 .cs-hover-box-text {
+    /* 13px - 16px */
+    font-size: clamp(0.8125rem, 1vw, 1rem);
+    line-height: 1.5em;
+    margin: 0 auto;
+    max-width: 16.875rem;
+    color: #fff;
+    /* make starting position down 10px and invisible */
+    opacity: 0;
+    transform: translateY(0.625rem);
+    transition:
+      opacity 0.3s,
+      transform 0.3s ease-out;
+    transition-delay: 0.2s;
+  }
+}
+
+/* In Between - 600px */
+@media only screen and (min-width: 37.5rem) {
+  #gallery-43 .cs-image-group {
+    display: grid;
+    grid-template-columns: repeat(12, 1fr);
+    grid-template-rows: 1fr;
+  }
+
+  #gallery-43 .cs-item {
+    grid-column: span 6;
+  }
+}
+
+/* Tablet - 768px */
+@media only screen and (min-width: 48rem) {
+  #gallery-43 .cs-item {
+    grid-column: span 4;
+  }
+}
+
+#gallery-43 {
+  background-color: #f7f8f8;
+  /* Add background color to the entire section */
+  width: 100%;
+  /* Ensure the section spans the full width of the viewport */
+  padding-top: 2%;
+  /* Add padding as needed */
+  padding-bottom: 2%;
+  /* Add vertical padding for spacing */
+  margin-top: 2%;
+}
+
+#gallery-43 .cs-container {
+  width: 100%;
+  /* Ensure the container doesn't constrain its children */
+  max-width: 1200px;
+  /* Optional: constrain content width for better design */
+}

@@ -1,0 +1,147 @@
+/*-- -------------------------- -->
+<---          Footer            -->
+<--- -------------------------- -*/
+
+/* Footer Base */
+.footer {
+  background-color: color-mix(in srgb, #08005e, transparent 10%);;
+  /* Use your heading color */
+  color: white;
+  padding: 3rem 1rem;
+  font-family: 'Poppins', sans-serif;
+  /* Elegant font */
+}
+
+/* Footer Container */
+.footer-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 2rem;
+  justify-content: space-between;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+  /* Subtle bottom border */
+  padding-bottom: 2rem;
+}
+
+/* Logo Section */
+.footer-logo-section {
+  flex: 1 1 300px;
+  text-align: left;
+}
+
+.footer-logo {
+  width: 150px;
+  margin-bottom: 1rem;
+}
+
+.footer-description {
+  font-size: 1rem;
+  font-weight: 600;
+  line-height: 1.6;
+  color: rgba(255, 255, 255, 0.8);
+  /* Slightly muted text color */
+}
+
+/* Quick Links Section */
+.footer-links-section {
+  flex: 1 1 200px;
+}
+
+.footer-title {
+  font-size: 1.2rem;
+  margin-bottom: 1rem;
+  color: white;
+  font-weight: bold;
+}
+
+.footer-links {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: grid;
+  /* Use Grid layout */
+  grid-template-columns: repeat(2, auto);
+  /* Create 2 columns */
+  gap: 0.5rem;
+  /* Add spacing between items */
+}
+
+.footer-link {
+  font-size: 0.9rem;
+  color: rgba(255, 255, 255, 0.8);
+  /* Muted link color */
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+.footer-link:hover {
+  color: var(--accent-color);
+  /* Accent color on hover */
+}
+
+/* Contact Section */
+.footer-contact-section {
+  flex: 1 1 200px;
+}
+
+.footer-contact {
+  font-size: 0.9rem;
+  margin-bottom: 0.5rem;
+  color: rgba(255, 255, 255, 0.8);
+}
+
+.footer-email {
+  font-size: 1rem;
+  font-weight: bold;
+  color: var(--accent-color);
+  /* Highlight email */
+  text-decoration: none;
+}
+
+.footer-email:hover {
+  text-decoration: underline;
+}
+
+/* Ensure "Privacy Policy" and "Terms of Use" are unaffected */
+.footer-legal {
+  margin-top: 1rem;
+  /* Add spacing above legal links */
+  text-align: center;
+  /* Center the legal links */
+}
+
+.footer-legal .footer-link {
+  margin: 0 1rem;
+  /* Add spacing between the two links */
+  display: inline-block;
+}
+
+/* Bottom Bar */
+.footer-bottom {
+  text-align: center;
+  margin-top: 2rem;
+  font-size: 0.85rem;
+  color: rgba(255, 255, 255, 0.6);
+  /* Subtle text color */
+}
+
+@media (max-width: 768px) {
+  .footer-container {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .footer-logo-section,
+  .footer-links-section,
+  .footer-contact-section {
+    flex: none;
+    margin-bottom: 1.5rem;
+  }
+
+  .footer-logo {
+    align-self: center;
+    margin: 0 auto 1rem;
+  }
+}

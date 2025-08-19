@@ -1,0 +1,297 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta content="width=device-width, initial-scale=1.0" name="viewport">
+    <title>Mathias C Services</title>
+    <meta name="description" content="">
+    <meta name="keywords" content="">
+
+    <!-- Favicons -->
+
+    <!-- Fonts -->
+    <link href="https://fonts.googleapis.com" rel="preconnect">
+    <link href="https://fonts.gstatic.com" rel="preconnect" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Raleway:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+        rel="stylesheet">
+
+    <!-- CSS Files -->
+    <link href="assets/css/main-style.css" rel="stylesheet">
+    <link href="assets/css/header.css" rel="stylesheet">
+    <link href="assets/css/home.css" rel="stylesheet">
+    <link href="assets/css/footer.css" rel="stylesheet">
+
+</head>
+
+<body>
+
+    <!-- ============================================ -->
+    <!--                 Navigation                   -->
+    <!-- ============================================ -->
+
+    <header id="cs-navigation">
+        <div class="cs-container">
+            <!--Nav Logo-->
+            <!--Logo is turned white in the css with a filter on dark mode-->
+            <a href="index.html" class="cs-logo" aria-label="back to home">
+                <img src="assets/img/Design_sans_titre__1_-removebg-preview.png" alt="logo" width="210" height="36"
+                    aria-hidden="true" decoding="async">
+            </a>
+            <!--Navigation List-->
+            <nav class="cs-nav" role="navigation">
+                <!--Mobile Nav Toggle-->
+                <button class="cs-toggle" aria-label="mobile menu toggle">
+                    <div class="cs-box" aria-hidden="true">
+                        <span class="cs-line cs-line1" aria-hidden="true"></span>
+                        <span class="cs-line cs-line2" aria-hidden="true"></span>
+                        <span class="cs-line cs-line3" aria-hidden="true"></span>
+                    </div>
+                </button>
+                <!-- We need a wrapper div so we can set a fixed height on the cs-ul in case the nav list gets too long from too many dropdowns being opened and needs to have an overflow scroll. This wrapper acts as the background so it can go the full height of the screen and not cut off any overflowing nav items while the cs-ul stops short of the bottom of the screen, which keeps all nav items in view no matter how mnay there are-->
+                <div class="cs-ul-wrapper">
+                    <ul id="cs-expanded" class="cs-ul" aria-expanded="false">
+                        <li class="cs-li">
+                            <a href="index.html" class="cs-li-link cs-active">
+                                Home
+                            </a>
+                        </li>
+                        <!-- <li class="cs-li">
+                            <a href="about.html" class="cs-li-link">
+                                About
+                            </a>
+                        </li> -->
+                        <li class="cs-li">
+                            <a href="services.html" class="cs-li-link">
+                                Services
+                            </a>
+                        </li>
+                        <!-- <li class="cs-li">
+                            <a href="blog.html" class="cs-li-link">
+                                Blog
+                            </a>
+                        </li> -->
+                        <li class="cs-li">
+                            <a href="contact.html" class="cs-li-link">
+                                Contact
+                            </a>
+                        </li>
+                        <li class="cs-li">
+                            <a href="pricing.html" class="cs-li-link">
+                                Pricing
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+            </nav>
+            <a href="contact.html" class="cs-btn">Get Started</a>
+        </div>
+    </header>
+
+
+    <main class="main">
+
+        <!-- Hero Section -->
+        <section id="hero" class="hero section dark-background">
+            <img src="assets/img/hero-bg-2.jpg" alt="Hero Background" class="hero-bg">
+
+            <div class="container">
+                <div class="row gy-4 justify-content-between">
+
+                    <div class="col-lg-6  d-flex flex-column justify-content-center" data-aos="fade-in">
+                        <h1>Small Business <span>Web Designer</span></h1>
+                        <p>No page builders or WordPress. We offer 100% hand-coded websites with superior results.</p>
+                        <div class="d-flex">
+                            <a href="#about" class="btn-get-started">Get Started</a>
+                        </div>
+                    </div>
+
+                    <div class="hero-img" data-aos="zoom-out" data-aos-delay="100">
+                        <img src="assets/img/laptop.png" class="img-fluid animated" alt="">
+                    </div>
+
+                </div>
+            </div>
+
+            <svg class="hero-waves" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"
+                viewBox="0 24 150 28 " preserveAspectRatio="none">
+                <defs>
+                    <path id="wave-path" d="M-160 44c30 0 58-18 88-18s 58 18 88 18 58-18 88-18 58 18 88 18 v44h-352z">
+                    </path>
+                </defs>
+                <g class="wave1">
+                    <use xlink:href="#wave-path" x="50" y="3"></use>
+                </g>
+                <g class="wave2">
+                    <use xlink:href="#wave-path" x="50" y="0"></use>
+                </g>
+                <g class="wave3">
+                    <use xlink:href="#wave-path" x="50" y="9"></use>
+                </g>
+            </svg>
+
+        </section><!-- /Hero Section -->
+
+        <!-- ============================================ -->
+        <!--                  Services                    -->
+        <!-- ============================================ -->
+
+        <section id="services-690">
+            <div class="cs-container">
+                <div class="cs-content">
+                    <div class="cs-flex-group">
+                        <span class="cs-topper">Our Services</span>
+                        <h2 class="cs-title">Never Worry About Your Website Again
+                        </h2>
+                    </div>
+                    <p class="cs-text">
+                        We specialize in small business
+                        web design and development for clients anywhere in the world.
+                        Every line of code is written by hand to ensure
+                        the best performance and make Google happy, which helps
+                        bring in more customers to your site and bring more
+                        revenue to your business.
+                    </p>
+                </div>
+                <ul class="cs-card-group">
+                    <li class="cs-item">
+                        <a class="cs-link">
+                            <picture class="cs-picture">
+                                <img class="cs-icon" src="assets/img/i2.svg" loading="lazy" decoding="async" alt="icon"
+                                    width="32" height="32" aria-hidden="true">
+                            </picture>
+                            <h3 class="cs-h3">Fully Responsive</h3>
+                            <p class="cs-item-text">
+                                Your website must work on any device. We ensure it looks great and performs well on desktops, tablets, and phones, making your site shine for all visitors.
+                            </p>
+                        </a>
+                    </li>
+                    <li class="cs-item">
+                        <a class="cs-link">
+                            <picture class="cs-picture">
+                                <img class="cs-icon" src="assets/img/custom-coding-svgrepo-com.svg" loading="lazy"
+                                    decoding="async" alt="icon" width="32" height="32" aria-hidden="true">
+                            </picture>
+                            <h3 class="cs-h3">Custom Web Design</h3>
+                            <p class="cs-item-text">
+                                Your website is often the first impression customers have of your business. Let us
+                                create a design that stands out, aligns with your brand, and works seamlessly across
+                                devices. We focus on design aesthetics, functionality, and user experience to ensure
+                                your site delivers results.
+                            </p>
+                        </a>
+                    </li>
+                    <li class="cs-item">
+                        <a class="cs-link">
+                            <picture class="cs-picture">
+                                <img class="cs-icon" src="assets/img/i3.svg" loading="lazy" decoding="async" alt="icon"
+                                    width="32" height="32" aria-hidden="true">
+                            </picture>
+                            <h3 class="cs-h3">Optimized Page Speed</h3>
+                            <p class="cs-item-text">
+                                If your site takes more than 3 seconds to load you can lose up to 50% of your trafic
+                                because it took too long. Our sites load in 1 second or less ensuring everyone that
+                                visits you site reaches it.
+                            </p>
+                        </a>
+                    </li>
+                </ul>
+                <a href="#" class="service-button">Get Started</a>
+            </div>
+        </section>
+
+        <!-- ============================================ -->
+        <!--                   Gallery                    -->
+        <!-- ============================================ -->
+
+        <section id="gallery-43">
+            <div class="cs-container">
+                <div class="cs-content">
+                    <span class="cs-topper">Portfolio</span>
+                    <h2 class="cs-title">Some of the work we have done</h2>
+                    <p class="cs-text">
+                        Be our first client</p>
+                </div>
+                <!-- <div class="cs-image-group">
+                    <a class="cs-item" href="">
+                        <picture class="cs-picture">
+                            <source media="(max-width: 600px)"
+                                srcset="https://csimg.nyc3.digitaloceanspaces.com/Gallery/house1-m.jpg">
+                            <source media="(min-width: 601px)"
+                                srcset="https://csimg.nyc3.digitaloceanspaces.com/Gallery/house1.jpg">
+                            <img loading="lazy" decoding="async"
+                                src="https://csimg.nyc3.digitaloceanspaces.com/Gallery/house1.jpg" alt="fancy house"
+                                width="346" height="346">
+                        </picture>
+
+                        <div class="cs-hover-box">
+                            <picture class="cs-icon">
+                                <img loading="lazy" decoding="async"
+                                    src="https://csimg.nyc3.digitaloceanspaces.com/Gallery/orange-arrow-right.svg"
+                                    alt="fancy house" width="20" height="20" aria-hidden="true">
+                            </picture>
+                            <h3 class="cs-h3">Modern Architectual Design</h3>
+                            <p class="cs-hover-box-text">
+                                Li Europan lingues es membres del sam familie. Lor separat existentie es un myth.
+                            </p>
+                        </div>
+                    </a>
+                </div> -->
+            </div>
+        </section>
+
+
+        <!-- ============================================ -->
+        <!--                   Footer                     -->
+        <!-- ============================================ -->
+        <footer class="footer">
+            <div class="footer-container">
+                <!-- Logo and Description -->
+                <div class="footer-logo-section">
+                    <img src="assets/img/logo-no-background.svg" alt="Logo" class="footer-logo">
+                    <p class="footer-description">
+                        Helping you achieve your goals with expert services tailored for success.
+                    </p>
+                </div>
+
+                <!-- Quick Links -->
+                <div class="footer-links-section">
+                    <h3 class="footer-title">Quick Links</h3>
+                    <ul class="footer-links">
+                        <li><a href="#" class="footer-link">Home</a></li>
+                        <li><a href="#" class="footer-link">About</a></li>
+                        <li><a href="#" class="footer-link">Services</a></li>
+                        <li><a href="#" class="footer-link">Blog</a></li>
+                        <li><a href="#" class="footer-link">Contact</a></li>
+                        <li><a href="#" class="footer-link">Pricing</a></li>
+                    </ul>
+                </div>
+
+                <!-- Contact Section -->
+                <div class="footer-contact-section">
+                    <h3 class="footer-title">Contact Us</h3>
+                    <p class="footer-contact">Email us at:</p>
+                    <a href="mailto:info@example.com" class="footer-email">mathias.combalbert@outlook.com</a>
+                </div>
+            </div>
+
+            <!-- Bottom Bar -->
+            <div class="footer-bottom">
+                <p>Copyright &copy;
+                    <script>document.write(new Date().getFullYear())</script> Mathias C. Services All Rights Reserved
+                </p>
+                <div class="footer-legal">
+                    <a href="/privacy-policy.html" class="footer-bottom-link">Privacy Policy</a>
+                    <span class="divider">|</span>
+                    <a href="/terms-of-use.html" class="footer-bottom-link">Terms of Use</a>
+                </div>
+            </div>
+        </footer>
+
+    </main>
+
+    <script src="assets/js/script.js"></script>
+</body>
+
+</html>
