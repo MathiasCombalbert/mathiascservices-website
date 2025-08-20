@@ -19,7 +19,7 @@
     <!-- CSS Files -->
     <link href="assets/css/main-style.css" rel="stylesheet">
     <link href="assets/css/header.css" rel="stylesheet">
-    <link href="assets/css/pricing.css" rel="stylesheet">
+    <link href="assets/css/contact.css" rel="stylesheet">
     <link href="assets/css/footer.css" rel="stylesheet">
 
 </head>
@@ -87,6 +87,79 @@
             <a href="contact.html" class="cs-btn">Get Started</a>
         </div>
     </header>
+
+    <!-- ============================================ -->
+    <!--                 Hero Section                 -->
+    <!-- ============================================ -->
+    <section id="hero" class="hero-rounded">
+        <div class="hero-content">
+            <h1>Contact</h1>
+        </div>
+    </section>
+
+    <!-- ============================================ -->
+    <!--                   Contact                    -->
+    <!-- ============================================ -->
+
+    <section id="contact-1150">
+        <div class="cs-container">
+            <div class="cs-content">
+                <span class="cs-topper">Contact Us</span>
+                <h2 class="cs-title">Get In Touch</h2>
+            </div>
+            <div class="cs-contact-group">
+                <picture class="cs-picture">
+                    <!--Mobile Image-->
+                    <source media="(max-width: 600px)"
+                        src="assets/img/pexels-pixabay-4158.jpg">
+                    <!--Tablet and above Image-->
+                    <source media="(min-width: 601px)"
+                    src="assets/img/pexels-pixabay-4158.jpg">
+                    <img loading="lazy" decoding="async"
+                    src="assets/img/pexels-pixabay-4158.jpg" alt="people"
+                        width="630" height="300">
+                </picture>
+                <p class="cs-contact-text">
+                    Send us an email and let us know everything you want out of a new site. We respond to everyone within 24 hours of contacting us.
+                </p>
+                <ul class="cs-ul">
+                    <li class="cs-li">
+                        <picture class="cs-icon-wrapper">
+                            <img aria-hidden="true"
+                                src="https://csimg.nyc3.cdn.digitaloceanspaces.com/Icons/mail-76.svg"
+                                alt="address icon" class="cs-icon" width="40" height="40" decoding="async">
+                        </picture>
+                        <div class="cs-flex-group">
+                            <span class="cs-header">Mail</span>
+                            <a href="mailto:mathias.combalbert@outlook.com" class="cs-link">Click To Email</a>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+            <!--Form-->
+            <form class="cs-form" id="cs-form-1150" name="Contact Form" method="post">
+                <label class="cs-label">
+                    Name
+                    <input class="cs-input" required type="text" id="name-1150" name="name" placeholder="Name">
+                </label>
+                <label class="cs-label cs-email">
+                    Email
+                    <input class="cs-input" required type="email" id="email-1150" name="email" placeholder="Email">
+                </label>
+                <label class="cs-label cs-phone">
+                    Phone
+                    <input class="cs-input" required type="number" id="phone-1150" name="phone" placeholder="Phone">
+                </label>
+                <label class="cs-label">
+                    Message
+                    <textarea class="cs-input cs-textarea" required name="Message" id="message-1150"
+                        placeholder="Write message..."></textarea>
+                </label>
+                <button class="cs-button-solid" type="submit">Send Message</button>
+            </form>
+        </div>
+    </section>
+
 
     <!-- ============================================ -->
     <!--                   Footer                     -->
