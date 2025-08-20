@@ -1,58 +1,74 @@
 #hero {
+  position: relative;
+  padding: 100px 5% 2rem;
+  padding-top: 200px;
   display: flex;
-  flex-direction: row;
   align-items: center;
-  justify-content: space-between;
-  padding: 0 5% 2rem;
-  min-height: 80vh;
-  padding-top: 100px;
+  justify-content: center;
+  padding-bottom: 200px;
 }
 
+/* FLEXBOX ROW: text + image */
 .hero-content {
-  flex: 1;
-  padding-right: 2rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 3rem;
+  max-width: 1200px;
+  margin: 0 auto;
+  overflow: visible;     /* Allow child to overflow if needed */
+  position: relative;
   z-index: 2;
 }
 
-.hero-content h1 {
-  font-size: 3rem;
+/* LEFT SIDE (TEXT) */
+.hero-left {
+  flex: 1;
+  padding-right: 2rem;
+}
+
+.hero-left h1 {
+  margin: 0 0 1.25rem 0; /* 20px ~ 1.25rem */
+  font-size: clamp(2rem, 5vw, 3rem); /* scales from 2rem to 3rem depending on viewport */
   font-weight: 700;
-  margin-bottom: 1.5rem;
-  color: #222;
-  line-height: 1.2;
+  line-height: clamp(2.5rem, 6vw, 3.5rem); /* scales with font-size */
+  color: color-mix(in srgb, var(--heading-color), transparent 30%);
 }
 
-.hero-content p {
-  font-size: 1.2rem;
-  margin-bottom: 2.5rem;
-  max-width: 500px;
-  color: #555;
+.hero-left h1 span {
+  color: var(--heading-color);
+  border-bottom: 4px solid var(--accent-color);
 }
 
-
-#hero .hero-bg {
-  position: absolute;
-  inset: 0;
-  display: block;
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-  z-index: 1;
+.hero-left p {
+  margin: 0.25rem 0 1.875rem 0; /* 5px top, 30px bottom in rem */
+  font-size: clamp(1rem, 2.5vw, 1.375rem); /* scales from 1rem to 1.375rem */
+  font-weight: 400;
+  color: color-mix(in srgb, var(--default-color), transparent 30%);
 }
-
 
 .hero-image {
   flex: 1;
   display: flex;
   justify-content: center;
   align-items: center;
-  z-index: 2;
 }
 
 .hero-image img {
-  max-width: 100%;
+  width: 110%;           /* Slightly oversized */
+  max-width: none;       /* Remove default max-width limit */
   height: auto;
+  transform: translateX(10%);
   animation: bounce 3s infinite ease-in-out;
+}
+
+#hero .hero-bg {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  z-index: 1;
 }
 
 #hero:before {
@@ -63,7 +79,7 @@
   z-index: 2;
 }
 
-#hero h1 {
+/* #hero h1 {
   margin: 0 0 20px 0;
   font-size: 48px;
   font-weight: 700;
@@ -81,7 +97,7 @@
   margin: 5px 0 30px 0;
   font-size: 22px;
   font-weight: 400;
-}
+} */
 
 #hero .btn-get-started {
   z-index: 1;
@@ -119,24 +135,36 @@
   animation: up-down 2s ease-in-out infinite alternate-reverse both;
 }
 
-@media (max-width: 768px) {
-  #hero {
+/* MOBILE STACK */
+@media (max-width: 1024px) {
+  .hero-content {
     flex-direction: column;
     text-align: center;
-    padding: 2rem;
   }
 
-  .hero-content {
-    padding-right: 0;
-    margin-bottom: 2rem;
-  }
-
-  .hero-content p {
-    max-width: 100%;
-  }
-
-  .hero-image {
+  .hero-image img {
     width: 100%;
+    max-width: 100%;
+    transform: none;
+  }
+
+  .hero-left {
+    padding-right: 0;
+  }
+}
+
+@media (max-width: 480px) {
+  .hero-left h1 {
+    font-size: 1rem;  /* force smaller heading */
+    line-height: 1.3;
+  }
+
+  .hero-left p {
+    font-size: 0.95rem;
+  }
+
+  .hero-image img {
+    max-width: 80%;  /* shrink image slightly so both fit */
   }
 }
 
